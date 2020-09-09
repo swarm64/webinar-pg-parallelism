@@ -3,8 +3,10 @@
 * Semantics:
   - `max_worker_processes`: how many _processes_ overall PG is allowed to spawn
   - `max_parallel_workers`: how many _parallel workers_ can be spawned overall
-  - `max_parallel_workers_per_gather`: how many _parallel workers_ a _query subtree_ can use
-  - Note: a query can have multiple gather nodes
+  - `max_parallel_workers_per_gather`: how many _parallel workers_ can be used
+    on a portion of the query plan summarized by a "Gather Node".
+
+* Note: a query can have multiple gather nodes
 
 
 ## Example: 24 vCores
@@ -19,7 +21,7 @@ max_parallel_workers_per_gather = 12
 * More queries will run with less workers or sequential
 * If a query has multiple gather nodes the above might not hold
 
-  > Rule of thumb:
+  > **Rule of thumb**
   > `max_worker_processes` > `max_parallel_workers` > `max_parallel_workers_per_gather`
 
 
@@ -33,7 +35,7 @@ max_parallel_workers_per_gather = 12
 
 * 10 queries at max possibly utilizing 12 workers each
 * Avoids pitfall of running out of per-gather workers
-* **Downside:** watch out for resource contention/over-utilization
+* Watch out for resource contention/over-utilization
 
 
 ## PostgreSQL limits max parallelism
