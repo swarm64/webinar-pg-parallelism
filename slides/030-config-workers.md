@@ -22,7 +22,9 @@ max_parallel_workers_per_gather = 12
 * If a query has multiple gather nodes the above might not hold
 
   > **Rule of thumb**
-  > `max_worker_processes` > `max_parallel_workers` > `max_parallel_workers_per_gather`
+  >               `max_worker_processes`
+  > _larger than_ `max_parallel_workers`
+  > _larger than_ `max_parallel_workers_per_gather`
 
 
 ## Recommendation: increase amount of workers
