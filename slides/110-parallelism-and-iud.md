@@ -1,4 +1,4 @@
-## ...INSERT/UPDATE/DELETE
+# The trinity of INSERT, UPDATE & DELETE
 
 * Is your SQL complex to generate the info you need?
 
@@ -25,7 +25,7 @@ WHERE customers.c_custkey = c.c_custkey;
 ```
 
 
-* Make use of temporary tables
+## Make use of temporary tables
 
 ```sql
 EXPLAIN

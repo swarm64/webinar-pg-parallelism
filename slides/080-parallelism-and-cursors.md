@@ -1,6 +1,6 @@
-## ...cursors
+# Cursors
 
-* What does it take to get a single row?
+## What does it take to get a single row?
 
 ```sql
 SET enable_indexscan = off;
@@ -12,7 +12,8 @@ ORDER BY c_custkey ASC
 LIMIT 1;
 ```
 
-* A __cursor__ this turns sequential
+
+## This turns sequential when using a _cursor_
 
 ```sql
 SET enable_indexscan = off;
@@ -27,5 +28,9 @@ DECLARE c1 CURSOR FOR
 COMMIT;
 ```
 
-* Rather make use of OFFSET/LIMIT, if you really do not want to fetch all rows at once
+
+## Suggestions
+
+- Fetch all rows at once
+- Make use of OFFSET/LIMIT
 

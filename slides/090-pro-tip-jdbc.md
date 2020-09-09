@@ -8,9 +8,6 @@
 
 * JDBC typically connects in "extended query mode", this blocks parallelism
 * Use "simple query mode":
-
-```bash
-jdbc:postgresql://localhost/test?preferQueryMode=simple
-```
+  > `jdbc:postgresql://localhost/test?preferQueryMode=simple`
 
 -------------------------------------------------------------------------------
