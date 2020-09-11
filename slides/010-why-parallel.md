@@ -4,7 +4,7 @@
   > It makes your queries go faster.
 
 * The contemporary answer:
-  > It imporves machine utilization for OLAP/mixed workloads.
+  > It improves machine utilization for OLAP/mixed workloads.
 
 
 # Which queries benefit from parallelism?

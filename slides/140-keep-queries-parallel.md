@@ -71,7 +71,7 @@ SET swarm64da.enable_shuffled_distinct = on;
 SET swarm64da.enable_unnesting = on;
 SET swarm64da.maximize_parallel_workers_per_query = on;
 
-EXPLAIN ANALYZE
+EXPLAIN --ANALYZE
 SELECT SUM(l_extendedprice) / 7.0 AS avg_yearly
 FROM
     lineitem
